@@ -1,4 +1,13 @@
 <div class="jumbotron center">
 	<h1>Foodie Docent</h1>
-	<p>Click here to  <%= link_to "Sign Up", "#", class: "btn btn-danger" %>.</p>
+
+	<% if user_signed_in? %>
+          
+     <% else %>
+       <p>
+         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  	<% end %>  
+	
 </div>
