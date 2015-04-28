@@ -4,6 +4,7 @@
   <strong>Description:</strong>
   <%= @place.description %>
 </p>
-
+<% if @place.user == current_user %>
 <%= link_to 'Edit', edit_place_path(@place) %> |
+<% end %>
 <%= link_to 'Back', places_path %>
