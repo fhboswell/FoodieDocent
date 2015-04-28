@@ -1,4 +1,4 @@
-require 'open-uri'
+
 
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
@@ -6,7 +6,8 @@ class PlacesController < ApplicationController
 
   def index
     @places = Place.all
-
+ 
+   
   end
 
   def show
