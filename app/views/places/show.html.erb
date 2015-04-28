@@ -1,10 +1,10 @@
-<p id="notice"><%= notice %></p>
+<%= image_tag @place.image.url(:medium) %>
 
 <p>
   <strong>Description:</strong>
   <%= @place.description %>
 </p>
 <% if @place.user == current_user %>
-<%= link_to 'Edit', edit_place_path(@place) %> |
+	<%= link_to 'Edit', edit_place_path(@place) %> |
 <% end %>
 <%= link_to 'Back', places_path %>
